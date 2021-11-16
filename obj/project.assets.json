@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\darko.jovanovski\\.nuget\\packages\\": {}
+    "C:\\WINDOWS\\system32\\config\\systemprofile\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\darko.jovanovski\\myApp\\myApp.csproj",
+      "projectUniqueName": "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\myLocalSite\\myApp.csproj",
       "projectName": "myApp",
-      "projectPath": "C:\\Users\\darko.jovanovski\\myApp\\myApp.csproj",
-      "packagesPath": "C:\\Users\\darko.jovanovski\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\darko.jovanovski\\myApp\\obj\\",
+      "projectPath": "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\myLocalSite\\myApp.csproj",
+      "packagesPath": "C:\\WINDOWS\\system32\\config\\systemprofile\\.nuget\\packages\\",
+      "outputPath": "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\myLocalSite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\darko.jovanovski\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

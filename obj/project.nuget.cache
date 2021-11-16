@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WDF689uQB07iTGNKhxA62JrzOoobB7WNKJzhdM1lmqdlCRdbGL4feus+1C+M5JaJVQsEGzQr/pvrDrsL0nXEdg==",
+  "dgSpecHash": "OvkPAjMFjo3Oai1HpMXv2QXGc3qJw+ighRpoywddPGTR6wgGcah8VpFFq/B4N9Fo6PcAqrjiv4nuELxmpOrlUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\darko.jovanovski\\myApp\\myApp.csproj",
+  "projectFilePath": "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\myLocalSite\\myApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
