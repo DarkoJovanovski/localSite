@@ -44,8 +44,6 @@ pipeline {
 					//bat """msbuild $WORKSPACE\\${solution_location} /p:OutDir=$WORKSPACE\\Deploy\\,Configuration=${params.environment}"""
 				//}
             }
-        }
-        }
-        
+        }        
     }    
 }
