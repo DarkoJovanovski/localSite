@@ -32,7 +32,7 @@ pipeline {
         
         stage('Artifactory deploy') {
             steps {
-                bat 'curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T Desktop/proba4.json'
+                bat 'curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T Desktop/test2.json'
 		    
             }
         }
