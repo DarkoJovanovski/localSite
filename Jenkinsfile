@@ -38,7 +38,7 @@ pipeline {
                       //  credentialsId: 'artifactory', 
                         //passwordVariable: 'adminAdm1n', 
                         //usernameVariable: 'admin')]) {
-					sh 'curl --version'
+					bat 'curl --version'
 					//bat """nuget restore -source https://wowinc.jfrog.io/wowinc/api/nuget/nuget/"""
 					//bat """nuget restore"""
 					//bat """msbuild $WORKSPACE\\${solution_location} /p:OutDir=$WORKSPACE\\Deploy\\,Configuration=${params.environment}"""
