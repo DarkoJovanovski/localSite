@@ -30,20 +30,20 @@ pipeline {
         }
         
         
-        stage('artifact') {
-            steps {
+        //stage('artifact') {
+          //  steps {
 				// set the nuget api user/pass for artifactory
               //  withCredentials(
                   // [usernamePassword(
                       //  credentialsId: 'artifactory', 
                         //passwordVariable: 'adminAdm1n', 
                         //usernameVariable: 'admin')]) {
-					bat 'curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T "C:\Users\darko.jovanovski\Desktop\test6.json"'
+	//				bat 'curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T "C:\Users\darko.jovanovski\Desktop\test6.json"'
 					//bat """nuget restore -source https://wowinc.jfrog.io/wowinc/api/nuget/nuget/"""
 					//bat """nuget restore"""
 					//bat """msbuild $WORKSPACE\\${solution_location} /p:OutDir=$WORKSPACE\\Deploy\\,Configuration=${params.environment}"""
 				//}
-            }
-        }        
+          //  }
+        //}        
     }    
 }
