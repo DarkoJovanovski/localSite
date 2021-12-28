@@ -38,7 +38,7 @@ pipeline {
                       //  credentialsId: 'artifactory', 
                         //passwordVariable: 'adminAdm1n', 
                         //usernameVariable: 'admin')]) {
-					bat 'curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T C:\test6.json'
+					bat 'curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T appsettings.json'
 					//bat """nuget restore -source https://wowinc.jfrog.io/wowinc/api/nuget/nuget/"""
 					//bat """nuget restore"""
 					//bat """msbuild $WORKSPACE\\${solution_location} /p:OutDir=$WORKSPACE\\Deploy\\,Configuration=${params.environment}"""
