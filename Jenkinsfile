@@ -30,20 +30,26 @@ pipeline {
         }
         
         
-        stage('artifact') {
+        /*stage('artifact') {
             steps {
-				// set the nuget api user/pass for artifactory
-              //  withCredentials(
-                  // [usernamePassword(
-                      //  credentialsId: 'artifactory', 
-                        //passwordVariable: 'adminAdm1n', 
-                        //usernameVariable: 'admin')]) {
-					bat """curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T C:\\test6.json"""
-					//bat """nuget restore -source https://wowinc.jfrog.io/wowinc/api/nuget/nuget/"""
-					//bat """nuget restore"""
-					//bat """msbuild $WORKSPACE\\${solution_location} /p:OutDir=$WORKSPACE\\Deploy\\,Configuration=${params.environment}"""
-				//}
+	    	// publish artifact to jfrog using curl command
+		bat """curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T C:\\test6.json"""
+				
             }
-        }        
+        } */
+	    
+	stage('artifact2') {
+            steps {
+                def uploadSpec = """{
+  			"files": [
+			{
+			"pattern": "C:\\test6.json",
+      			"target": "http://localhost:8082/artifactory/artifactory-build-info/"
+    			}
+			]
+		}"""
+		server.upload spec: uploadSpec
+            }
+        }  
     }    
 }
