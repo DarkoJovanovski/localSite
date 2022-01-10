@@ -47,8 +47,9 @@ pipeline {
       			"target": "http://localhost:8082/artifactory/artifactory-build-info/"
     			}
 			]
+	server.upload spec: uploadSpec
 		}"""
-		server.upload spec: uploadSpec
+		
             }
         }  
     }    
