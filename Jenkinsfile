@@ -58,9 +58,9 @@ pipeline {
             steps {
                 rtUpload (
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
-		   //def server = Artifactory.newServer url: 'artifactory-url', username: 'admin', password: 'adminAdm1n'
-                    //serverId: example-repo-local,
-			def server = Artifactory.server 'example-repo-local'
+		 def server = Artifactory.newServer url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'
+                 //serverId: example-repo-local,
+		//def server = Artifactory.server 'example-repo-local'
                     spec: """{
                             "files": [
                                     {
