@@ -65,7 +65,7 @@ pipeline {
                     spec: """{
                             "files": [
                                     {
-                                        "pattern": "C:\test7.json",
+                                        "pattern": "C:\\test7.json",
                                         "target": "http://localhost:8082/artifactory/example-repo-local/"
                                     }
                                 ]
