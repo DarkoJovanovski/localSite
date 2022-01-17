@@ -74,17 +74,17 @@ pipeline {
 	stage ('upload artifact') {
 	  steps{
 	    rtUpload (
-    	      serverId: '''example-repo-local''',
-    		spec: '''{
+    	      serverId: "example-repo-local",
+    		spec: """{
           	  "files": [
 			   {
              		     "pattern": "C:\\test7.json",
             		     "target": "http://localhost:8082/artifactory/example-repo-local/"
            	 	   }  
          	  ]
-    		}'''
+    		}"""
 		
-	     )
+	    )
 	  }
         }
 	    
