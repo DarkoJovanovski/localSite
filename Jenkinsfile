@@ -38,7 +38,7 @@ pipeline {
             }
         } */
 	    
-	stage('artifact2') {
+	/*stage('artifact2') {
             steps {
                 def uploadSpec = """{
   			"files": [
@@ -51,6 +51,25 @@ pipeline {
 		}"""
 		
             }
-        }  
+        } */
+	    
+	    
+	 stage ('Upload file') {
+            steps {
+                rtUpload (
+                    // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
+                    serverId: example-repo-local,
+                    spec: """{
+                            "files": [
+                                    {
+                                        "pattern": "C:\test7.json",
+                                        "target": "http://localhost:8082/artifactory/example-repo-local/"
+                                    }
+                                ]
+                            }"""
+                )
+            }
+        }
+	    
     }    
 }
