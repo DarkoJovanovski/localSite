@@ -75,6 +75,7 @@ pipeline {
             }*/
 	    	
 	    stage ('upload artifact') {
+		    steps{
 	    	rtUpload (
     			serverId: 'example-repo-local/',
     			spec: '''{
@@ -87,7 +88,7 @@ pipeline {
     			}'''
 		
 		   )
-	   
+		   }
         }
 	    
     }    
