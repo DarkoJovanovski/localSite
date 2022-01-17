@@ -58,10 +58,7 @@ pipeline {
             steps {
                 rtUpload (
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
-		 def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""",
-                 //serverId: example-repo-local,
-		//def server = Artifactory.server 'example-repo-local',
-			//def server = Artifactory.newServer url: 'http://localhost:8082/artifactory/example-repo-local/', credentialsId: '9dbbeffc-68e0-4814-a795-6efe04db745f',
+		 def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""",	
                def uploadSpec = """{
                             "files": [
                                     {
@@ -74,21 +71,21 @@ pipeline {
                 )
             }*/
 	    	
-	    stage ('upload artifact') {
-		    steps{
-	    	rtUpload (
-    			serverId: 'example-repo-local',
-    			spec: '''{
-          			"files": [
-           			 {
-             			 "pattern": "C:\\test7.json",
-            			"target": "http://localhost:8082/artifactory/example-repo-local/"
-           	 		}
-         			]
-    			}'''
+	stage ('upload artifact') {
+	  steps{
+	    rtUpload (
+    	      serverId: '''example-repo-local''',
+    		spec: '''{
+          	  "files": [
+			   {
+             		     "pattern": "C:\\test7.json",
+            		     "target": "http://localhost:8082/artifactory/example-repo-local/"
+           	 	   }  
+         	  ]
+    		}'''
 		
-		   )
-		   }
+	     )
+	  }
         }
 	    
     }    
