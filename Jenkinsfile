@@ -55,21 +55,23 @@ pipeline {
 	    
 	  
 	    
-	 /*stage ('Upload file') {
+	 stage ('Upload file') {
             steps {
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
-		def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""" 	
-               def uploadSpec = """{
-                            "files": [
-                                    {
-                                        "pattern": "C:\\test7.json",
-                                        "target": "http://localhost:8082/artifactory/example-repo-local/"
-                                    }
-                                ]
-                            }"""
-			server.upload spec: uploadSpec
-            }
-	 }*/
+		    script {
+			def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""" 	
+               		def uploadSpec = """{
+                            	"files": [
+                                    	{
+                                       	 	"pattern": "C:\\test7.json",
+                                        	"target": "http://localhost:8082/artifactory/example-repo-local/"
+                                    	}
+                                	]
+                            	}"""
+				server.upload spec: uploadSpec
+		    }
+	    }    
+	 }
 	    
 	    
 	    stage ('test string') {
@@ -84,6 +86,7 @@ pipeline {
 								println(values);
 
 							}
+				    
 			    }
 		    }
 
