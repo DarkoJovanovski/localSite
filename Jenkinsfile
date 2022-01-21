@@ -54,19 +54,19 @@ pipeline {
         } */
 
 	    
-	    /*stage ('server connection') {
+	    stage ('server connection') {
             steps {
 		   script {
-			//def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
-               		def server = Artifactory.server 'example-repo-local'
+			def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
+               		//def server = Artifactory.server 'example-repo-local'
 		    }
 	    }    
-	 }*/
+	 }
 	    
 	 stage ('Upload file') {
             steps {
 		   script {	
-               		def server = Artifactory.server "http://localhost:8082/artifactory";
+               		//def server = Artifactory.server "http://localhost:8082/artifactory";
 			   def uploadSpec = """{
                             	"files": [
                                     	{
