@@ -60,7 +60,7 @@ pipeline {
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
 		   script {
 			//def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
-               		def server = Artifactory.server 'example-repo-local',
+               		//def server = Artifactory.server 'example-repo-local',
 			   def uploadSpec = """{
                             	"files": [
                                     	{
