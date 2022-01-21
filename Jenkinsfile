@@ -56,7 +56,6 @@ pipeline {
 	    
 	 stage ('Upload file') {
             steps {
-                rtUpload (
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
 		 def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""",	
                def uploadSpec = """{
@@ -68,7 +67,6 @@ pipeline {
                                 ]
                             }"""
 			server.upload spec: uploadSpec
-                )
             }
 	    	
 	/*stage ('upload artifact') {
