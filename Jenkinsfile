@@ -58,13 +58,13 @@ pipeline {
 	 stage ('Upload file') {
             steps {
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
-		    script {
-			def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
+		   script {
+			//def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
                		def uploadSpec = """{
                             	"files": [
                                     	{
-                                       	 	"pattern": "C:\\test7.json",
-                                        	"target": "http://localhost:8082/artifactory/example-repo-local/"
+                                       	"pattern": "C:\\test7.json",
+                                        "target": "http://localhost:8082/artifactory/example-repo-local/"
                                     	}
                                 	]
                             	}"""
@@ -77,20 +77,18 @@ pipeline {
 	    /*stage ('test string') {
 		    steps {
 			    script {
-			    				def novString = "darko go vladej jenkins";
-							String[] str;
-							str = novString.split(' ');
+			    	def novString = "darko go vladej jenkins";
+				String[] str;
+				str = novString.split(' ');
 
-							for( String values : str ){
-								if (values.contains("jenkins")) 
-								println(values);
-
-							}
-				    
+				for( String values : str ){
+					if (values.contains("jenkins")) 
+					println(values);
+				}    
 			    }
 		    }
-
 	    }*/
+	    
 	    
 	  /*  
 	stage ('upload artifact') {
@@ -105,10 +103,8 @@ pipeline {
            	 	   }  
          	  ]
     		}"""
-		
 	    )
 	  }
-        }*/
-	    
+        }*/    
     }    
 }
