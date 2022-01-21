@@ -74,7 +74,7 @@ pipeline {
 	    
 	    stage ('test string') {
 		    steps {
-		    				
+			    script {
 			    				def novString = "darko go vladej jenkins";
 							String[] str;
 							str = novString.split(' ');
@@ -84,7 +84,7 @@ pipeline {
 								println(values);
 
 							}
-			  
+			    }
 		    }
 
 	    }
