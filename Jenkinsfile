@@ -54,17 +54,11 @@ pipeline {
         } */
 	    
 	  
-	    stage ('connect') {
-		    steps {
-		     def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'"""
-		    
-		    }
-	    }
 	    
-	 stage ('Upload file') {
+	 /*stage ('Upload file') {
             steps {
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
-		 	
+		def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""" 	
                def uploadSpec = """{
                             "files": [
                                     {
@@ -75,9 +69,20 @@ pipeline {
                             }"""
 			server.upload spec: uploadSpec
             }
-	 }
-	    	
-	/*stage ('upload artifact') {
+	 }*/
+	    
+	    
+	    stage ('test string') {
+		    steps {
+		    def novString = """Borko go vladej Jenkins"""
+			  
+		    }
+	    	System.out.println(novString);
+	    
+	    }
+	    
+	  /*  
+	stage ('upload artifact') {
 	  steps{
 	    rtUpload (
     	      serverId: "example-repo-local",
