@@ -30,41 +30,11 @@ pipeline {
         }
         
         
-        /*stage('artifact') {
-            steps {
-	    	// publish artifact to jfrog using curl command
-		bat """curl -u admin:adminAdm1n -X PUT "http://localhost:8082/artifactory/example-repo-local/" -T C:\\test6.json"""
-				
-            }
-        } */
-	    
-	/*stage('artifact2') {
-            steps {
-                def uploadSpec = """{
-  			"files": [
-			{
-			"pattern": "C:\\test6.json",
-      			"target": "http://localhost:8082/artifactory/artifactory-build-info/"
-    			}
-			]
-	server.upload spec: uploadSpec
-		}"""
-		
-            }
-        } */
-
-	    
-	    /*stage ('server connection') {
-            steps {
-		   script {
-			//def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'"""	
-               		def server = Artifactory.server 'example-repo-local'
-		    }
-	    }    
-	 }*/
+       
 	    
 	 stage ('Upload file') {
             steps {
+		    // deploying artifact. File mentioned in "pattern" is in worspace myLocalSite (whole path is in jenkins build)
 		   script {	
                		def server = Artifactory.server "example-repo-local";
 			   def uploadSpec = """{
@@ -79,8 +49,7 @@ pipeline {
 		    }
 	    }    
 	 }
-	    
-	    
+	        
 	    /*stage ('test string') {
 		    steps {
 			    script {
@@ -95,23 +64,5 @@ pipeline {
 			    }
 		    }
 	    }*/
-	    
-	    
-	  /*  
-	stage ('upload artifact') {
-	  steps{
-	    rtUpload (
-    	      serverId: "example-repo-local",
-    		spec: """{
-          	  "files": [
-			   {
-             		     "pattern": "C:\\test7.json",
-            		     "target": "http://localhost:8082/artifactory/example-repo-local/"
-           	 	   }  
-         	  ]
-    		}"""
-	    )
-	  }
-        }*/    
     }    
 }
