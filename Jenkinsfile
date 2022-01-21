@@ -71,7 +71,7 @@ pipeline {
                             	"files": [
                                     	{
                                        	"pattern": "novtest1.json",
-                                        "target": "artifactory/example-repo-local/"
+                                        "target": "http://localhost:8082/artifactory/example-repo-local/"
                                     	}
                                 	]
                             	}"""
