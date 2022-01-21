@@ -66,7 +66,7 @@ pipeline {
 	 stage ('Upload file') {
             steps {
 		   script {	
-               		def server = Artifactory.server "example-repo-local";
+               		def server = Artifactory.server "http://localhost:8082/artifactory";
 			   def uploadSpec = """{
                             	"files": [
                                     	{
