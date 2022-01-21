@@ -68,6 +68,7 @@ pipeline {
                             }"""
 			server.upload spec: uploadSpec
             }
+	 }
 	    	
 	/*stage ('upload artifact') {
 	  steps{
