@@ -74,11 +74,19 @@ pipeline {
 	    
 	    stage ('test string') {
 		    steps {
-		    def novString = """Borko go vladej Jenkins"""
+		    				
+			    				def novString = "darko go vladej jenkins";
+							String[] str;
+							str = novString.split(' ');
+
+							for( String values : str ){
+								if (values.contains("jenkins")) 
+								println(values);
+
+							}
 			  
 		    }
-	    	System.out.println(novString);
-	    
+
 	    }
 	    
 	  /*  
