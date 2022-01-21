@@ -54,7 +54,7 @@ pipeline {
         } */
 	    
 	    
-	 /*stage ('Upload file') {
+	 stage ('Upload file') {
             steps {
                 rtUpload (
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
@@ -69,9 +69,9 @@ pipeline {
                             }"""
 			server.upload spec: uploadSpec
                 )
-            }*/
+            }
 	    	
-	stage ('upload artifact') {
+	/*stage ('upload artifact') {
 	  steps{
 	    rtUpload (
     	      serverId: "example-repo-local",
@@ -86,7 +86,7 @@ pipeline {
 		
 	    )
 	  }
-        }
+        }*/
 	    
     }    
 }
