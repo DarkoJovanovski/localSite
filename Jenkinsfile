@@ -70,8 +70,8 @@ pipeline {
 			   def uploadSpec = """{
                             	"files": [
                                     	{
-                                       	"pattern": "Desktop\\novtest1.json"
-                                        
+                                       	"pattern": "Desktop\\novtest1.json",
+                                        "target": "example-repo-local"
                                     	}
                                 	]
                             	}"""
