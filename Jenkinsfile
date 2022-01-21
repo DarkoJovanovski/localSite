@@ -59,7 +59,7 @@ pipeline {
             steps {
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
 		    script {
-			def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""" 	
+			def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
                		def uploadSpec = """{
                             	"files": [
                                     	{
@@ -74,7 +74,7 @@ pipeline {
 	 }
 	    
 	    
-	    stage ('test string') {
+	    /*stage ('test string') {
 		    steps {
 			    script {
 			    				def novString = "darko go vladej jenkins";
@@ -90,7 +90,7 @@ pipeline {
 			    }
 		    }
 
-	    }
+	    }*/
 	    
 	  /*  
 	stage ('upload artifact') {
