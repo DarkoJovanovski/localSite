@@ -65,14 +65,13 @@ pipeline {
 	    
 	 stage ('Upload file') {
             steps {
-		   script {
-			//def server = Artifactory.newServer """url: 'http://localhost:8082/artifactory/example-repo-local/', username: 'admin', password: 'adminAdm1n'""", 	
+		   script {	
                		def server = Artifactory.server "example-repo-local";
 			   def uploadSpec = """{
                             	"files": [
                                     	{
                                        	"pattern": "novtest1.json",
-                                        "target": "http://localhost:8082/artifactory/example-repo-local/"
+                                        "target": "artifactory/example-repo-local/"
                                     	}
                                 	]
                             	}"""
