@@ -70,7 +70,7 @@ pipeline {
 			   def uploadSpec = """{
                             	"files": [
                                     	{
-                                       	"pattern": "myLocalSite/novtest1.json",
+                                       	"pattern": "novtest1.json",
                                         "target": "http://localhost:8082/artifactory/example-repo-local/"
                                     	}
                                 	]
