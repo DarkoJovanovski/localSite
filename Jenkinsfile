@@ -70,7 +70,7 @@ pipeline {
 			   def uploadSpec = """{
                             	"files": [
                                     	{
-                                       	"pattern": "appsettings.Development.json",
+                                       	"pattern": "myLocalSite/novtest1.json",
                                         "target": "example-repo-local/"
                                     	}
                                 	]
