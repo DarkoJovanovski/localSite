@@ -36,7 +36,7 @@ pipeline {
                 zip zipFile: 'myLocalSite.zip', archive: false, dir: 'archive'
                 archiveArtifacts artifacts: 'myLocalSite.zip', fingerprint: true
             }
-        
+	}
         
        
 	 /*   
