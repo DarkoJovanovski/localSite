@@ -34,7 +34,7 @@ pipeline {
                 // bat 'mkdir archive'
                 //bat 'echo test > archive/myLocalSite.txt'
                 //zip zipFile: 'myLocalSite.zip', archive: false, dir: 'archive'
-		  zip zipFile: 'myLocalSite.zip', dir: 'archive'
+		  zip zipFile: 'myLocalSite.zip', dir: 'myLocalSite'
                 //archiveArtifacts artifacts: 'myLocalSite.zip', fingerprint: true
             }
 	}
