@@ -39,7 +39,7 @@ pipeline {
             }
 	}
         
-         /* 
+          
 	 stage ('Upload file') {
             steps {
 		    // deploying artifact. File mentioned in "pattern" is in worspace myLocalSite (whole path is in jenkins build)
@@ -56,7 +56,7 @@ pipeline {
 			server.upload spec: uploadSpec	
 		    }
 	    }    
-	 }*/
+	 }
 	        
 	    /*stage ('test string') {
 		    steps {
