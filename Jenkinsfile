@@ -32,8 +32,8 @@ pipeline {
         stage ('zip the app') {
             steps {
                 bat 'mkdir archive'
-                bat 'echo test > archive/myLocalSite.txt'
-                zip zipFile: 'myLocalSite.zip', archive: false, dir: 'archive'
+                //bat 'echo test > archive/myLocalSite.txt'
+                zip zipFile: 'myLocalSite.zip', archive: true, dir: 'archive'
                 archiveArtifacts artifacts: 'myLocalSite.zip', fingerprint: true
             }
 	}
