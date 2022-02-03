@@ -32,14 +32,13 @@ pipeline {
         stage ('zip the app') {
             steps {
                 bat 'mkdir archive'
-                bat 'echo test > archive/myLocalSite.txt'
+                //bat 'echo test > archive/myLocalSite.txt'
                 zip zipFile: 'myLocalSite.zip', archive: false, dir: 'archive'
                 archiveArtifacts artifacts: 'myLocalSite.zip', fingerprint: true
             }
 	}
         
-       
-	 /*   
+          
 	 stage ('Upload file') {
             steps {
 		    // deploying artifact. File mentioned in "pattern" is in worspace myLocalSite (whole path is in jenkins build)
@@ -48,7 +47,7 @@ pipeline {
 			   def uploadSpec = """{
                             	"files": [
                                     	{
-                                       	"pattern": "novtest1.json",
+                                       	"pattern": "myLocalSite.zip",
                                         "target": "example-repo-local"
                                     	}
                                 	]
@@ -56,7 +55,7 @@ pipeline {
 			server.upload spec: uploadSpec	
 		    }
 	    }    
-	 } */
+	 }
 	        
 	    /*stage ('test string') {
 		    steps {
