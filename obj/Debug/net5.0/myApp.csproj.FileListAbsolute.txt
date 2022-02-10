@@ -88,4 +88,3 @@ C:\ProgramData\Jenkins\.jenkins\workspace\myLocalSite\bin\Debug\net5.0\ref\myApp
 C:\ProgramData\Jenkins\.jenkins\workspace\myLocalSite\bin\Debug\net5.0\myApp.pdb
 C:\ProgramData\Jenkins\.jenkins\workspace\myLocalSite\bin\Debug\net5.0\myApp.Views.dll
 C:\ProgramData\Jenkins\.jenkins\workspace\myLocalSite\bin\Debug\net5.0\myApp.Views.pdb
-C:\Users\darko.jovanovski\Desktop\myLocalSite\myApp.StaticWebAssets.xml
