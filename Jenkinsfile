@@ -30,12 +30,6 @@ pipeline {
             }
         }
 	    
-	stage('go to desktop dir') {
-            steps {
-                bat 'cd C:\\Users\\darko.jovanovski\\Desktop'
-            }
-        }
-	    
 	stage('push the app to linux') {
             steps {
                 bat 'scp -r -i test-cicd_key.pem C:\\Users\\darko.jovanovski\\myApp iwadmin@20.115.110.249:/home/iwadmin'
