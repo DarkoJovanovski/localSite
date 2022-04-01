@@ -29,7 +29,7 @@ pipeline {
             }
         }
 	    
-        stage ('zip the app') {
+       /* stage ('zip the app') {
             steps {
                 // bat 'mkdir archive'
                 //bat 'echo test > archive/myLocalSite.txt'
@@ -56,7 +56,7 @@ pipeline {
 			server.upload spec: uploadSpec	
 		    }
 	    }    
-	 }
+	 }*/
 	        
 	    /*stage ('test string') {
 		    steps {
