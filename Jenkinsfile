@@ -33,7 +33,7 @@ pipeline {
 	stage('push the app to linux') {
             steps {
 		bat 'C:\\Users\\darko.jovanovski\\Desktop
-                bat 'scp -r -i test-cicd_key.pem C:\\Users\\darko.jovanovski\\myApp iwadmin@20.115.110.249:/home/iwadmin'
+                bat 'scp -r -i test-cicd_key.pem C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite iwadmin@20.115.110.249:/home/iwadmin'
             }
         }
 	    
