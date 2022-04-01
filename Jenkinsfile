@@ -1,7 +1,22 @@
 pipeline {
     agent any
+	
+	
+	
+	
+	stage ('enter desktop dir') {
+		steps {
+			bat 'C:\Users\darko.jovanovski\Desktop'
+		}
+	}
+	
+	stage ('push folder app to linux') {
+		steps {
+			bat 'scp -r -i test-cicd_key.pem C:\Users\darko.jovanovski\Desktop\myLocalSite iwadmin@20.115.110.249:/home/iwadmin'
+		}
+	}
 
-    stages {
+    /*stages {
         stage('Pull proj') {
             steps {
                 // Get some code from a GitHub repository
@@ -27,7 +42,7 @@ pipeline {
                 bat 'dotnet publish --output C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite'
 
             }
-        }
+      */  }
 	    
        /* stage ('zip the app') {
             steps {
