@@ -30,6 +30,13 @@ pipeline {
             }
         }
 	    
+	stage('test') {
+            steps {
+                bat 'cd C:\\Users\\darko.jovanovski\\Desktop'
+
+            }
+        }
+	    
        /* stage ('zip the app') {
             steps {
                 // bat 'mkdir archive'
