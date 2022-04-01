@@ -42,7 +42,7 @@ pipeline {
                 bat 'dotnet publish --output C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite'
 
             }
-      */  }
+        }  */
 	    
        /* stage ('zip the app') {
             steps {
