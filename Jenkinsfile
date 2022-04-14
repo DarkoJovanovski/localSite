@@ -2,7 +2,7 @@ pipeline {
     agent any
 	
     stages {
-	    
+	/*    
         stage('Pull proj') {
             steps {
                 // Get some code from a GitHub repository
@@ -28,11 +28,11 @@ pipeline {
                 bat 'dotnet publish --output C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite'
 
             }
-        }
+        }*/
 	    
 	stage('push the app to linux') {
             steps {
-                bat 'scp -r C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite iwuser@192.168.1.124:/home/iwuser'
+                bat 'scp -r D:\\myLocalSite iwuser@192.168.1.124:/home/iwuser'
             }
         }
 	    
