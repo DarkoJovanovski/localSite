@@ -6,7 +6,7 @@ pipeline {
         stage('Pull proj') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/DarkoJovanovski/localSite.git'
+                git 'git@github.com:DarkoJovanovski/localSite.git'
 
             }
 
