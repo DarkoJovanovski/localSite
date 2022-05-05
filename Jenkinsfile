@@ -32,7 +32,7 @@ pipeline {
 	    
 	stage('push the app to linux') {
             steps {
-                bat 'scp -r C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite iwuser@192.168.1.124:/home/iwuser'
+                bat 'scp -r C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite darko@192.168.2.90:/home/darko'
             }
         }
 	    
