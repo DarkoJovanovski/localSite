@@ -32,7 +32,7 @@ pipeline {
 	    
 	stage('push the app to linux') {
             steps {
-                bat 'scp -i id_rsa.pem -r C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite darko@192.168.2.90:/home/darko'
+                bat 'scp -i C:\\Users\\darko.jovanovski\\.ssh\\id_rsa.pem -r C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite darko@192.168.2.90:/home/darko'
             }
         }
 	    
