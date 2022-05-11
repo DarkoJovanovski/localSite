@@ -6,7 +6,7 @@ pipeline {
 	    stage('cmd') {
             steps {
                 // build dotnet core app
-                bat 'ssh darko@192.168.2.90 'ls''
+                bat "ssh darko@192.168.2.90 'ls'"
 
             }
 
