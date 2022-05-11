@@ -6,7 +6,7 @@ pipeline {
 	    stage('cmd') {
             steps {
                 // build dotnet core app
-                bat 'telnet 192.168.2.90 22'
+                bat "telnet 192.168.2.90 22"
 
             }
 
