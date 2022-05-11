@@ -1,8 +1,18 @@
 pipeline {
     agent any
 	
-    stages {	    
-	   
+    stages {
+	    
+	    stage('cmd') {
+            steps {
+                // build dotnet core app
+                bat ' ssh darko@192.168.2.90 'ls' '
+
+            }
+
+        }
+	    
+	/*   
         stage('Pull proj') {
             steps {
                 // Get some code from a GitHub repository
@@ -35,7 +45,7 @@ pipeline {
                 bat 'scp -i C:\\Users\\darko.jovanovski\\.ssh\\id_rsa.pem -r C:\\Users\\darko.jovanovski\\Desktop\\myLocalSite darko@192.168.2.90:/home/darko'
             }
         }
-	    
+	  */  
        /* stage ('zip the app') {
             steps {
                 // bat 'mkdir archive'
