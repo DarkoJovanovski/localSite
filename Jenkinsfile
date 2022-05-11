@@ -5,7 +5,7 @@ pipeline {
 	    
 	    stage('cmd') {
             steps {
-                bat 'telnet 192.168.2.90 22'
+                bat 'whoami'
             }
 
         }
