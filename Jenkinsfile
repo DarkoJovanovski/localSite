@@ -52,10 +52,8 @@ pipeline {
             steps {
 		    
 		   withCredentials([usernameColonPassword(credentialsId: '040a4186-05a6-4b58-adbf-0a04853e821d', variable: 'creds')]) {
-    			
-			$creds    
 			      
-			   
+			   'creds'
 		   }
 		    
 		    script {	
