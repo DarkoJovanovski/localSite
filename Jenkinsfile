@@ -47,9 +47,14 @@ pipeline {
 	}
         
           
+	    // deploying artifact. File mentioned in "pattern" is in worspace myLocalSite (whole path is in jenkins build)
 	 stage ('Upload file') {
             steps {
-		    // deploying artifact. File mentioned in "pattern" is in worspace myLocalSite (whole path is in jenkins build)
+		    
+		   withCredentials([usernamePassword(credentialsId: '040a4186-05a6-4b58-adbf-0a04853e821d', passwordVariable: 'pass', usernameVariable: 'user')]) {
+    			// some block
+		   }
+		    
 		   script {	
                		def server = Artifactory.newServer url: 'http://192.168.2.90:8082/artifactory/'
 			   def uploadSpec = """{
