@@ -58,7 +58,7 @@ pipeline {
 			def uploadSpec = """{
                             "files": [
                                     	{
-                                       	"pattern": "myLocalSite2.zip",
+                                       	"pattern": "myLocalSite.zip",
                                         "target": "example-repo-local"
                                     	}
                                 	]
