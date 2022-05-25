@@ -51,9 +51,9 @@ pipeline {
 	 stage ('Upload file') {
             steps {
 		    
-		   withCredentials([usernamePassword(credentialsId: '040a4186-05a6-4b58-adbf-0a04853e821d', passwordVariable: 'pass', usernameVariable: 'user')]) {
+		   withCredentials([usernameColonPassword(credentialsId: '040a4186-05a6-4b58-adbf-0a04853e821d', variable: 'creds')]) {
     			
-			   
+			    creds;
 			    script {	
                			def server = Artifactory.newServer url: 'http://192.168.2.90:8082/artifactory/'
 			   	def uploadSpec = """{
