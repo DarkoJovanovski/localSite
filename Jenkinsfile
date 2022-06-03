@@ -15,7 +15,7 @@ pipeline {
         stage('build') {
             steps {
                 // build dotnet core app
-                bat 'dotnet build --output C:\\.\\myLocalSite'
+                bat 'dotnet build --output .\\.\\myLocalSite'
 
             }
 
