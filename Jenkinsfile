@@ -25,7 +25,7 @@ pipeline {
         stage('publish') {
             steps {
                 // publish dotnet core app
-                bat 'dotnet publish --output C:\\.\\myLocalSite'
+                bat 'dotnet publish --output .\\myLocalSite'
 
             }
         }
